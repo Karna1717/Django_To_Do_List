@@ -1,0 +1,216 @@
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  transition: background 0.4s, color 0.4s;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 🔥 Animated Floating Background */
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(0, 123, 255, 0.2);
+  border-radius: 50%;
+  opacity: 0.8;
+  filter: blur(15px);
+  animation: float 10s infinite ease-in-out alternate;
+}
+
+/* Positioning circles */
+.circle:nth-child(1) {
+  top: 10%;
+  left: 15%;
+  animation-duration: 6s;
+}
+
+.circle:nth-child(2) {
+  top: 50%;
+  left: 75%;
+  animation-duration: 8s;
+}
+
+.circle:nth-child(3) {
+  top: 80%;
+  left: 30%;
+  animation-duration: 10s;
+}
+
+.circle:nth-child(4) {
+  top: 20%;
+  left: 80%;
+  animation-duration: 12s;
+}
+
+.circle:nth-child(5) {
+  top: 70%;
+  left: 50%;
+  animation-duration: 14s;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-30px) scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(30px) scale(1);
+    opacity: 0.5;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 600px;
+  width: 90%;
+  padding: 25px;
+  background: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
+  transition: background 0.4s, color 0.4s;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Input Field */
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+  animation: fadeIn 1s ease-in-out;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+}
+
+/* Buttons */
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.theme-toggle {
+  background-color: #007bff;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.theme-toggle:hover {
+  background-color: #0056b3;
+}
+
+.add {
+  background-color: #28a745;
+  color: white;
+}
+
+.add:hover {
+  background-color: #218838;
+}
+
+.delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete:hover {
+  background-color: #c82333;
+}
+
+/* Todo List */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s;
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+li:hover {
+  transform: scale(1.02);
+}
+
+/* Slide Up Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+  }
+}

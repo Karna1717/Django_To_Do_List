@@ -1,0 +1,57 @@
+/* Dark Mode */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+  }
+  
+  .dark-mode .container {
+    background: #2a2a2a;
+    color: #e0e0e0;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  }
+  
+  .dark-mode input[type="text"] {
+    background: #333;
+    color: #fff;
+    border: 1px solid #555;
+  }
+  
+  .dark-mode input[type="text"]:focus {
+    border-color: #00bcd4;
+  }
+  
+  .dark-mode button {
+    background-color: #444;
+    color: #fff;
+  }
+  
+  .dark-mode .theme-toggle {
+    background-color: #00bcd4;
+    color: white;
+  }
+  
+  .dark-mode .theme-toggle:hover {
+    background-color: #008c9e;
+  }
+  
+  .dark-mode .add {
+    background-color: #27ae60;
+  }
+  
+  .dark-mode .add:hover {
+    background-color: #1e8449;
+  }
+  
+  .dark-mode .delete {
+    background-color: #c0392b;
+  }
+  
+  .dark-mode .delete:hover {
+    background-color: #a93226;
+  }
+  
+  .dark-mode li {
+    background-color: #3a3a3a;
+    border-color: #555;
+  }
+  
